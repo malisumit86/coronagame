@@ -33,21 +33,21 @@ function init() {
         y: 50,
         w: 60,
         h: 60,
-        speed: 30
+        speed: 10
     };
     e2 = {
         x: 300,
         y: 100,
         w: 60,
         h: 60,
-        speed: 40
+        speed: 20
     };
     e3 = {
         x: 450,
         y: 200,
-        w: 80,
-        h: 80,
-        speed: 60
+        w: 60,
+        h: 60,
+        speed: 30
     };
     enemy = [e1, e2, e3];
 
@@ -65,19 +65,11 @@ function init() {
         w: 60,
         h: 60,
     };
-     document.addEventListener('mousedown', function() {
-        console.log("mouse is click");
-        player.moving = true;
-    });
-     document.addEventListener('mouseup', function() {
-        console.log("mouse is release");
-        player.moving = false;
-    });
     document.addEventListener('touchstart', function() {
         console.log("mouse is click");
         player.moving = true;
     });
-    document.removeEventListener('touchstart', function() {
+    document.addEventListener('mouseup', function() {
         console.log("mouse is release");
         player.moving = false;
     });
@@ -128,7 +120,7 @@ function collision(b1, b2) {
         return true;
     }
     return false; */
- 
+
 }
 //enemy collision
 
@@ -171,7 +163,8 @@ function update() {
     }
     //collision enemy
     for (let i = 0; i < enemy.length; i++) {
-         if (enemy_collision(player, enemy[i])) {
+
+        if (enemy_collision(player, enemy[i])) {
             score -= i * 100;
             game_over = true;
             window.alert("game_Over!!!");
