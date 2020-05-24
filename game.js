@@ -128,7 +128,7 @@ function collision(b1, b2) {
         return true;
     }
     return false; */
-
+ 
 }
 //enemy collision
 
