@@ -93,6 +93,11 @@ function init() {
 
         } else if (e.key == "a") {
             player.moving = -1;
+        }else if (e.key == "w") {
+            player.moving = -2;
+
+        } else if (e.key == "z") {
+            player.moving = -3;
         }
 
     })
@@ -154,6 +159,11 @@ function update() {
         score += 20;
     } else if (player.moving == -1) {
         player.x -= player.speed;
+    }else if (player.moving == -3) {
+        player.y += player.speed;
+
+    } else if (player.moving == -2) {
+        player.y -= player.speed;
     }
 
     for (let i = 0; i < enemy.length; i++) {
