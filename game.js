@@ -65,7 +65,18 @@ function init() {
         w: 60,
         h: 60,
     };
+    //for touch mobile
     document.addEventListener('touchstart', function() {
+        console.log("mouse is click");
+        player.moving = true;
+    });
+    document.addEventListener('touchstart', function() {
+        console.log("mouse is release");
+        player.moving = false;
+    });
+
+    //for mouse oparation
+    document.addEventListener('mousedown', function() {
         console.log("mouse is click");
         player.moving = true;
     });
