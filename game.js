@@ -5,7 +5,7 @@ function Load_images() {
     player_img.src = "superhero.png";
     gem_img = new Image;
     gem_img.src = "gem.png";
-};
+}; 
 
 function init() {
     //get the id from html
