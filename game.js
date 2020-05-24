@@ -65,11 +65,19 @@ function init() {
         w: 60,
         h: 60,
     };
+     document.addEventListener('mousedown', function() {
+        console.log("mouse is click");
+        player.moving = true;
+    });
+     document.addEventListener('mouseup', function() {
+        console.log("mouse is release");
+        player.moving = false;
+    });
     document.addEventListener('touchstart', function() {
         console.log("mouse is click");
         player.moving = true;
     });
-    document.addEventListener('mouseup', function() {
+    document.removeEventListener('touchstart', function() {
         console.log("mouse is release");
         player.moving = false;
     });
