@@ -70,10 +70,7 @@ function init() {
         console.log("mouse is click");
         player.moving = true;
     });
-    document.removeEventListener('touchstart', function() {
-        console.log("mouse is release");
-        player.moving = false;
-    });
+
 
     //for mouse oparation
     document.addEventListener('mousedown', function() {
