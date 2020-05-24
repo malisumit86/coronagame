@@ -65,7 +65,7 @@ function init() {
         w: 60,
         h: 60,
     };
-    document.addEventListener('mousedown', function() {
+    document.addEventListener('touchstart', function() {
         console.log("mouse is click");
         player.moving = true;
     });
