@@ -171,13 +171,10 @@ function update() {
     }
     //collision enemy
     for (let i = 0; i < enemy.length; i++) {
-
-        if (enemy_collision(player, enemy[i])) {
+         if (enemy_collision(player, enemy[i])) {
             score -= i * 100;
-            if (score <= 0) {
-                game_over = true;
-                window.alert("game_Over!!!");
-            }
+            game_over = true;
+            window.alert("game_Over!!!");
             draw();
             // alert("You score" + score);
         }
